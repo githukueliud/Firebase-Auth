@@ -24,13 +24,13 @@ fun AppNavHost(
         startDestination = startDestination
     ) {
         composable(ROUTE_LOGIN) {
-            LoginScreen(viewModel , navController)
+            LoginScreen(navController, viewModel)
         }
         composable(ROUTE_SIGNUP) {
-            SignupScreen(navController)
+            SignupScreen(navController, viewModel)
         }
         composable(ROUTE_HOME) {
-            HomeScreen(navController)
+            HomeScreen(navController, viewModel)
         }
     }
 }

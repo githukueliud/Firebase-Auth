@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.Modifier
 import dagger.hilt.android.AndroidEntryPoint
 import net.simplifiedcoding.navigation.AppNavHost
 import net.simplifiedcoding.ui.auth.AuthViewModel
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppTheme {
-                AppNavHost(viewModel)
+                AppNavHost(viewModel = viewModel)
             }
         }
     }
